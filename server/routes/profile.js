@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
         jwt.verify(token, process.env.JWTSECRETKEY, {}, async (err, userData) => {
             if(err) throw err;
             const [userDoc] = await pool.query(`SELECT * FROM logininfo WHERE userid='${userData.id}';`);
-            console.log(userDoc);
             res.json(userDoc[0].userid);
         });
     } else {s

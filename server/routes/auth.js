@@ -10,10 +10,10 @@ router.post('/', async (req, res) => {
 			return res.status(400).send({ message: "Object is missing" });
 
         const [usersql] = await pool.query(`SELECT * FROM logininfo WHERE userid='${req.body.userid}';`);
-        if (usersql == [])
+        if (Object.keys(usersql).length === 0){
             return res.status(409).send({ message: "User doesn't exist" });
-
-        const validPassword = await bcrypt.compare(req.body.password,usersql[0].password);
+          }
+        const validPassword = await bcrypt.compare(req.body.password, usersql[0].password);
 
         if (!validPassword)
 			return res.status(401).send({ message: "Invalid Email or Password" });

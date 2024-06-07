@@ -1,0 +1,19 @@
+.container{
+    float: left;
+    width: 25%;
+    height: 100vh;
+    background: rgb(255, 218, 220);
+}
+
+p{
+    margin: 0;
+}
+
+.ulist{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255,1,187);
+}

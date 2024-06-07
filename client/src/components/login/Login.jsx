@@ -23,7 +23,6 @@ function Login(){
 		try {
 			const url = "/api/login";
 			const { data: res } = await axios.post(url, data);
-			// localStorage.setItem("token", res.data);
 			window.location = "/header";
 		} catch (error) {
 			if (
