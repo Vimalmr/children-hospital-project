@@ -1,19 +1,42 @@
-.container{
+.container {
     float: left;
     width: 25%;
     height: 100vh;
-    background: rgb(255, 218, 220);
+    background: rgb(249, 229, 230);
 }
 
-p{
+p {
     margin: 0;
 }
 
-.ulist{
+.ulist {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-a{
+li {
+    padding: 30px;
+    background: rgb(236, 201, 224);
+    border-color: rgb(249, 229, 230);
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+}
+
+a {
+    font-size: 30px;
     text-decoration: none;
-    color: rgb(255,1,187);
+    color: rgb(255, 1, 187);
+}
+
+link {
+
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(255, 1, 187);
+}
+
+li:hover {
+    font-weight: bold;
 }
