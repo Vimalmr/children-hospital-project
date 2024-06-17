@@ -5,6 +5,7 @@ import Signup from "./components/signup/Signup";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import { UserContextProvider } from "./components/Usercontext";
+import PatientReports from "./components/Patient Reports/PatientReports";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = 'http://localhost:8619';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/header" element={<Header />} />
         <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/patient_reports" element={<PatientReports />}/>
       </Routes>
       </Router>
     </UserContextProvider>
