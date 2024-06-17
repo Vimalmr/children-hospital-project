@@ -72,6 +72,7 @@ function Signup(){
 							type="password"
 							placeholder="Enter the Password"
 							name="password"
+                            className='inputForm'
                             onChange={handleChange}
                             value={data.password}
 							required
@@ -83,6 +84,7 @@ function Signup(){
 							type="text"
 							placeholder="Enter the Role"
 							name="role"
+                            className='inputForm'
                             onChange={handleChange}
                             value={data.role}
 							required
