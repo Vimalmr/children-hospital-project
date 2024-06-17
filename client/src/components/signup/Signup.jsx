@@ -60,6 +60,7 @@ function Signup(){
 							type="text"
 							placeholder="Enter the UserID"
 							name="userid"
+                            className='inputForm'
                             onChange={handleChange}
                             value={data.userid}
 							required
