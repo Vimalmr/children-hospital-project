@@ -54,6 +54,7 @@ function Login(){
 							type="text"
 							placeholder="Enter the UserID"
 							name="userid"
+                            className={style2.loginInput}
                             onChange={handleChange}
                             value={data.userid}
 							required
@@ -65,6 +66,7 @@ function Login(){
 							type="password"
 							placeholder="Enter the Password"
 							name="password"
+                            className={style2.loginInput}
                             onChange={handleChange}
                             value={data.password}
 							required

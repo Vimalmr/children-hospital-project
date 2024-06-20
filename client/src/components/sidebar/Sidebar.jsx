@@ -6,10 +6,18 @@ import { useState } from 'react';
 function Sidebar() {
     const [activeComponent, setActiveComponent] = useState('home');
 
-    const renderComponent = () =>{
-        switch(activeComponent){
+    const renderComponent = () => {
+        switch (activeComponent) {
+            case 'home':
+                return <h2>Home</h2>; //change to home when the component is created
+            case 'patient_information':
+                return <h2>Patient Information</h2>; //change to Patient Information when the component is created
+            case 'examination':
+                return <h2>Examination</h2>; //change to Examination when the component is created
             case 'patient_reports':
                 return <PatientReports />;
+            case 'documents':
+                return <h2>Documents</h2> //change to Documents when the component is created
         }
     }
     return (
@@ -17,11 +25,11 @@ function Sidebar() {
             <Header />
             <div className={style6.container}>
                 <ul className={style6.ulist}>
-                <li><a href="#home" onClick={() => setActiveComponent('home')}>Home</a></li>
-                <li><a href="#patient_information" onClick={() => setActiveComponent('patient_information')}>Patient Information</a></li>
-                <li><a href="#examination" onClick={() => setActiveComponent('examination')}>Examination</a></li>
-                <li><a href="#patient_reports" onClick={() => setActiveComponent('patient_reports')}>Patient Reports</a></li>
-                <li><a href="#document" onClick={() => setActiveComponent('document')}>Document</a></li>
+                    <li className={`${activeComponent === 'home' ? style6.activePage : ''}`} onClick={() => setActiveComponent('home')}>Home</li>
+                    <li className={`${activeComponent === 'patient_information' ? style6.activePage : ''}`} onClick={() => setActiveComponent('patient_information')}>Patient Information</li>
+                    <li className={`${activeComponent === 'examination' ? style6.activePage : ''}`} onClick={() => setActiveComponent('examination')}>Examination</li>
+                    <li className={`${activeComponent === 'patient_reports' ? style6.activePage : ''}`} onClick={() => setActiveComponent('patient_reports')}>Patient Reports</li>
+                    <li className={`${activeComponent === 'documents' ? style6.activePage : ''}`} onClick={() => setActiveComponent('documents')}>Documents</li>
                 </ul>
             </div>
             <div>

@@ -49,7 +49,7 @@
     margin: 10px;
 }
 
-.inputForm [type=text],[type=password]{
+.inputForm{
     height: 20px;
     margin: 10px;
     outline: none;
