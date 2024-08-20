@@ -81,6 +81,7 @@ const Home = () => {
             },
         )
     };
+
     console.log(PatientData);
     console.log(MotherData);
     console.log(FatherData);
@@ -96,7 +97,7 @@ const Home = () => {
         console.log("data of patient",data);
         try{
 
-            const res = await axios.post("Endpoint",data);
+            const res = await axios.post("/api/patiententry",data);
             console.log('response',res.data);
         }catch(error){
             console.log("error at posting patient data",error);
