@@ -23,7 +23,7 @@ function Login(){
 		try {
 			const url = "/api/login";
 			const { data: res } = await axios.post(url, data);
-			window.location = "/header";
+			window.location = "/home";
 		} catch (error) {
 			if (
 				error.response &&
