@@ -4,6 +4,7 @@ import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./components/Home/Home";
 import { UserContextProvider } from "./components/Usercontext";
 import PatientReports from "./components/Patient Reports/PatientReports";
 
@@ -19,7 +20,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/header" element={<Header />} />
-        <Route path="/home" element={<Sidebar />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/patient_reports" element={<PatientReports />}/>
       </Routes>
       </Router>

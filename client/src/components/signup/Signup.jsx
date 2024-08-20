@@ -60,7 +60,7 @@ function Signup(){
 							type="text"
 							placeholder="Enter the UserID"
 							name="userid"
-                            className='inputForm'
+                            className={style1.inputForm}
                             onChange={handleChange}
                             value={data.userid}
 							required
@@ -72,7 +72,7 @@ function Signup(){
 							type="password"
 							placeholder="Enter the Password"
 							name="password"
-                            className='inputForm'
+                            className={style1.inputForm}
                             onChange={handleChange}
                             value={data.password}
 							required
@@ -84,7 +84,7 @@ function Signup(){
 							type="text"
 							placeholder="Enter the Role"
 							name="role"
-                            className='inputForm'
+                            className={style1.inputForm}
                             onChange={handleChange}
                             value={data.role}
 							required

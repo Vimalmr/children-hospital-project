@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style7 from './PatientReports.module.css'
+import ReportDetails from './ReportDetails/ReportDetails';
+import ReportEntry from './ReportEntry/ReportEntry';
 
 const PatientReports = () => {
+  const [reportComponent, setReportComponent] = useState('reportDetails');
+  const renderComponent = () => {
+    switch (reportComponent) {
+      case 'reportDetails':
+        return <ReportDetails />;
+      case 'reportEntry':
+        return <ReportEntry />;
+      default:
+        return <ReportDetails />;
+    }
+  };
   return (
     <div className={style7.container}>
       <div className={style7.buttonContainer}>
-        <button className={style7.topButton}>Report Details</button>
-        <button className={style7.topButton}>Report Entry</button>
+        <button className={`${style7.reportButton} ${reportComponent === 'reportDetails' ? style7.reportButtonActive : ''}`} onClick={() => setReportComponent('reportDetails')}>Report Details</button>
+        <button className={`${style7.reportButton} ${reportComponent === 'reportEntry' ? style7.reportButtonActive : ''}`}onClick={() => setReportComponent('reportEntry')}>Report Entry</button>
       </div>
       <div>
-        <label htmlFor="admissionNum">OP/Admission No:</label>
-        <input type='text' name='admissionNum' />
+      {renderComponent()}
       </div>
     </div>
   )

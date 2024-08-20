@@ -3,6 +3,9 @@
     width: 25%;
     height: 100vh;
     background: rgb(249, 229, 230);
+    overflow: hidden;
+    margin-right: 20px;
+    position: fixed;
 }
 
 p {
@@ -22,16 +25,7 @@ li {
     border-width: 5px;
     border-style: solid;
     text-align: center;
-}
-
-a {
-    font-size: 30px;
-    text-decoration: none;
-    color: rgb(255, 1, 187);
-}
-
-link {
-
+    cursor: pointer;
     font-size: 30px;
     text-decoration: none;
     color: rgb(255, 1, 187);
@@ -39,4 +33,14 @@ link {
 
 li:hover {
     font-weight: bold;
+}
+
+.activePage{
+    background-color: rgb(250,0,255);
+    color: white;
+    font-weight: bold;
+}
+
+.mainContent{
+    margin-left: 400px;
 }
