@@ -4,6 +4,7 @@
     align-items: center; /* Centers items vertically */
     width: auto;
     background-color: rgb(216,57,173);
+    overflow: hidden;
 }
 
 .headline{
