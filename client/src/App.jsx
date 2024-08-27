@@ -3,10 +3,11 @@ import axios from "axios";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/Home/Home";
+import HomeContent from "./components/HomeContent/HomeContent";
 import { UserContextProvider } from "./components/Usercontext";
 import PatientReports from "./components/Patient Reports/PatientReports";
+import { PatientInfo } from "./components/PatientInfo/PatientInfo";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = 'http://localhost:8619';
@@ -20,9 +21,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/header" element={<Header />} />
-        <Route path="/sidebar" element={<Sidebar />} />
-        <Route path="/home" element={<Home/>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/homeContent" element={<HomeContent/>} />
         <Route path="/patient_reports" element={<PatientReports />}/>
+        <Route path="/patientinfo" element={<PatientInfo />}/>
       </Routes>
       </Router>
     </UserContextProvider>

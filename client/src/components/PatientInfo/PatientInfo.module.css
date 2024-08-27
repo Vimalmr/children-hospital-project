@@ -1,0 +1,54 @@
+.container{
+    margin-right: 15px;
+}
+
+
+.heading{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: rgb(254,2,185);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.label{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-right: 15px;
+    
+    
+}
+
+.input{
+    margin-top: 12px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(249, 229, 230);
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: black;
+    border: 1px solid black;
+}
+
+.submit{
+    padding: 10px 15px;
+    background-color: rgb(250,0,255);
+    border-radius: 25px;
+    color: beige;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.get{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
