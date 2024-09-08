@@ -27,12 +27,8 @@ export const PatientInfo = () => {
         e.preventDefault();
 
         try{
-            const [res] = await axios.get("Endpoint" , {
-                params:{
-
-                    admno:admno
-
-                }
+            const res = await axios.get("/api/patientinfo" , {
+                params:{admno:admno}
             });
             setData(res.data);
             setStatus(true);
@@ -50,22 +46,24 @@ export const PatientInfo = () => {
     <>
         <div className={pstyle.container}>
             <div className={pstyle.heading}>Patient Information</div>
-            <div className={pstyle.get}>
-                <label className={pstyle.label}>Admission no:</label>
-                <input
-                className={pstyle.input}
-                type="text"
-                placeholder="Name"
-                name="name"
-                required
-                onChange={handleChange}
-                ></input>
-                <button  className={pstyle.submit} value='Search' type='submit'>Search</button>
-            </div>
+            <form onSubmit={handleSubmit}>
+                <div className={pstyle.get}>
+                    <label className={pstyle.label}>Admission no:</label>
+                    <input
+                        className={pstyle.input}
+                        type="text"
+                        placeholder="Admission Number"
+                        value={admno}
+                        onChange={handleChange}
+                        required
+                    />
+                    <button className={pstyle.submit} type="submit">Search</button>
+                </div>
+            </form>
             <div>
-                {status && <PatientDataForm pdata = {data.patientData} />}
-                {status && <MotherDataForm mdata = {data.motherData}/>}
-                {status && <FatherDataForm fdata = {data.fatherData}/>}
+                {status && <PatientDataForm pdata = {data.patientInfo} />}
+                {status && <MotherDataForm mdata = {data.motherInfo}/>}
+                {status && <FatherDataForm fdata = {data.fatherInfo}/>}
             </div>
             
 

@@ -22,11 +22,11 @@ router.post('/', async (req, res) => {
 		const [query2] = await pool.query(`INSERT INTO motherinfo(AdmissionNumber, Mother_Name, Mother_Age, Mother_Occupation, Mother_Health_General, Mother_Diabetes, Mother_Illness, Mother_Drugs, Mother_Exposure_Teratogens) VALUES ('${patientinfo.admno}', '${motherinfo.name}', '${motherinfo.age}', '${motherinfo.moocc}', '${motherinfo.hegnrl}', '${motherinfo.modiab}', '${motherinfo.moill}', '${motherinfo.modrg}', '${motherinfo.moexts}');`);
 		const [query3] = await pool.query(`INSERT INTO fatherinfo(AdmissionNumber, Father_Name, Father_Age, Father_Occupation, Father_Medication, Father_Past_illness, Father_Smoke, Father_Alcohol, Father_Tobacco) VALUES ('${patientinfo.admno}', '${fatherinfo.name}', '${fatherinfo.age}', '${fatherinfo.faocc}', '${fatherinfo.famed}', '${fatherinfo.fapaill}', '${fatherinfo.habits.smoke}', '${fatherinfo.habits.tobacco}', '${fatherinfo.habits.alcohol}');`);
 		console.log(query3);
-		res.status(201).send({ message: "Patient, Mother Entry successfull" });
+		return res.status(201).send({ message: "Patient, Mother Entry successfull" });
 
 	} catch (error) {
     console.log(error);
-		res.status(500).send({ message: "Internal Server Error" });
+		return res.status(500).send({ message: "Internal Server Error" });
 
 	}
 });

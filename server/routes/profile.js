@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
             const [userDoc] = await pool.query(`SELECT * FROM logininfo WHERE userid='${userData.id}';`);
             res.json(userDoc[0].userid);
         });
-    } else {s
+    } else {
         res.json(null);
     }
 })

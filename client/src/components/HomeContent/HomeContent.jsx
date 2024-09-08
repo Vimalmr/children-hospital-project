@@ -81,9 +81,6 @@ const HomeContent = () => {
             },
         )
     };
-    console.log(PatientData);
-    console.log(MotherData);
-    console.log(FatherData);
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
@@ -93,11 +90,9 @@ const HomeContent = () => {
             fatherData: FatherData
 
         };
-        console.log("data of patient",data);
         try{
 
-            const res = await axios.post("Endpoint",data);
-            console.log('response',res.data);
+            const res = await axios.post("/api/patiententry",data);
 
             setPatientData({
                 admno: '',
