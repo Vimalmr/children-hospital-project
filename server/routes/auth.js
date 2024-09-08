@@ -37,4 +37,16 @@ router.post('/', async (req, res) => {
     return jwt.sign(payload, process.env.JWTSECRETKEY);
   }
 
+  router.post('/logout', async (req, res) => {
+    res.status(204).cookie('token', "").send({message: "logged out successfully" });
+  });
+
+  function generateAccessToken(user) {
+    const payload = {
+      id: user.userid
+    };
+  
+    return jwt.sign(payload, process.env.JWTSECRETKEY);
+  }
+
   module.exports = router;
