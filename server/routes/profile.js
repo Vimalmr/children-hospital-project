@@ -7,7 +7,9 @@ router.get('/', (req, res) => {
     const {token} = req.cookies;
     if(token){
         jwt.verify(token, process.env.JWTSECRETKEY, {}, async (err, userData) => {
-            if(err) throw err;
+            if(err) {
+                return res.status(401).json(null);
+            }
             const [userDoc] = await pool.query(`SELECT * FROM logininfo WHERE userid='${userData.id}';`);
             res.json(userDoc[0].userid);
         });

@@ -1,9 +1,21 @@
 const express = require('express');
 const pool = require('../db');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
 
 router.get('/', async(req, res) => {
-    
+
+    const {token} = req.cookies;
+    if(token){
+        jwt.verify(token, process.env.JWTSECRETKEY, async (err, _ ) => {
+        if(err) {
+            return res.status(401).send({ message: "Cannot access without loggin in" });
+        }
+        });
+    } else {
+        return res.status(401).send({ message: "Cannot access without loggin in" });
+    }
+         
     const admissionNo = req.query.admno;
     
     if(!admissionNo)

@@ -3,7 +3,19 @@ const pool = require('../db');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  try {
+
+	const {token} = req.cookies;
+    if(token){
+        jwt.verify(token, process.env.JWTSECRETKEY, async (err, _ ) => {
+        if(err) {
+            return res.status(401).send({ message: "Cannot access without loggin in" });
+        }
+        });
+    } else {
+        return res.status(401).send({ message: "Cannot access without loggin in" });
+    }
+
+  	try {
 		if (Object.keys(req.body).length === 0)
 			return res.status(400).send({ message: "Object is missing" });
 
