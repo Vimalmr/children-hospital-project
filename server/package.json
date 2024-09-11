@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js",
-    "dev": "pm2 log 0",
-    "stop": "pm2 stop 0",
-    "delete": "pm2 delete 0"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
