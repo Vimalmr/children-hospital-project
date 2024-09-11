@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 // Middelwares
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://children-hospital-egmore.onrender.com/'],
 }));
 app.use(express.json());
 app.use(cookieParser());
