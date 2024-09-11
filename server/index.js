@@ -9,6 +9,7 @@ const authRoutes = require('./routes/auth');
 const profileRoutes = require('./routes/profile');
 const patientRoutes = require('./routes/patient');
 const patientInfoRoutes = require('./routes/patientinfo');
+const port = process.env.PORT || 5000;
 
 // Middelwares
 app.use(cors({
@@ -25,4 +26,4 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/patiententry", patientRoutes);
 app.use("/api/patientinfo", patientInfoRoutes);
 
-app.listen(8619, () => console.log('Server listening on port 8619'));
+app.listen(port, () => console.log('Server listening on port 8619'));
