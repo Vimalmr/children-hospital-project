@@ -21,6 +21,7 @@ router.post('/', async (req, res) => {
         const token = generateAccessToken(usersql[0]);
         res.status(200).cookie('token', token, {
           sameSite: 'none',
+          secure: true,
           maxAge: 24 * 60 * 60 * 1000
       }).send({ data: token, message: "logged in successfully" });
 
