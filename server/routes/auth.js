@@ -42,7 +42,10 @@ router.post('/', async (req, res) => {
   }
 
   router.post('/logout', async (req, res) => {
-    res.status(204).cookie('token', "").send({message: "logged out successfully" });
+    res.status(204).cookie('token', "", {
+      sameSite: 'none',
+      secure: true  
+    }).send({message: "logged out successfully" });
   });
 
   function generateAccessToken(user) {
