@@ -10,7 +10,7 @@ import PatientReports from "./components/Patient Reports/PatientReports";
 import { PatientInfo } from "./components/PatientInfo/PatientInfo";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://localhost:8619';
+axios.defaults.baseURL = 'https://children-hospital-egmore.onrender.com';
 
 function App() {
   return (

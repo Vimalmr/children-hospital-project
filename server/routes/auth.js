@@ -19,7 +19,10 @@ router.post('/', async (req, res) => {
 			return res.status(401).send({ message: "Invalid Email or Password" });
 
         const token = generateAccessToken(usersql[0]);
-        res.status(200).cookie('token', token).send({ data: token, message: "logged in successfully" });
+        res.status(200).cookie('token', token, {
+          sameSite: 'none',
+          maxAge: 24 * 60 * 60 * 1000
+      }).send({ data: token, message: "logged in successfully" });
 
     } catch (err) {
   

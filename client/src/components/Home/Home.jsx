@@ -23,6 +23,7 @@ function Home() {
         }
 
         if (user === null) {
+            console.log('null');
             navigate("/login");
         }
     }, [user, loading, error, navigate]);
