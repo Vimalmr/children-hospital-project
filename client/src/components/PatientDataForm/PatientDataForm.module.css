@@ -15,6 +15,7 @@
     height: 1px;
     background-color: grey;
     vertical-align: middle;
+    z-index: 1;
 
 }
 

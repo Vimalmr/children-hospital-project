@@ -3,9 +3,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  top: 0%;
+  top: 0px;
   position: fixed;
   background-color: rgb(216, 57, 173);
+  z-index: 1000;
 }
 
 .headline {
@@ -26,7 +27,7 @@
 
 .dropdown {
   position: relative; 
-  margin-right: 10%;
+
   display: inline-block;
 }
 
