@@ -1,0 +1,97 @@
+.heading{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 1;
+}
+.mainheading{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: rgb(254,2,185);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.line{
+
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+    width: 950px;
+    height: 1px;
+    background-color: grey;
+    vertical-align: middle;
+    z-index: 1;
+
+}
+
+.input{
+    margin-top: 3px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(249, 229, 230);
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: black;
+    border: 1px solid black;
+}
+
+.label{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    
+}
+
+.container{
+    margin-right: 15px;
+}
+
+
+.submit{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit input{
+    padding: 15px 30px;
+    background-color: rgb(250,0,255);
+    border-radius: 25px;
+    color: beige;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.get{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.get input{
+    margin-top: 12px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(249, 229, 230);
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: black;
+    border: 1px solid black;
+}
+
+.get label{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-right: 15px;
+}

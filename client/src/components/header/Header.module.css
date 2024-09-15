@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
+  width: 100%;
+  top: 0px;
+  position: fixed;
   background-color: rgb(216, 57, 173);
-  overflow: hidden;
+  z-index: 1000;
 }
 
 .headline {
@@ -25,6 +27,7 @@
 
 .dropdown {
   position: relative; 
+
   display: inline-block;
 }
 
@@ -32,7 +35,7 @@
   display: none; 
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 80px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   top: 100%; 

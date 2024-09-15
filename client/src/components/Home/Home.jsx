@@ -7,6 +7,7 @@ import { PatientInfo } from '../PatientInfo/PatientInfo';
 import { UserContext } from "../Usercontext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { Examination } from '../Examination/Examination';
 
 function Home() {
     const [activeComponent, setActiveComponent] = useState('home');
@@ -35,7 +36,7 @@ function Home() {
             case 'patient_information':
                 return <PatientInfo />;
             case 'examination':
-                return <h2>Examination</h2>;
+                return <h2><Examination /></h2>;
             case 'patient_reports':
                 return <PatientReports />;
             case 'documents':
