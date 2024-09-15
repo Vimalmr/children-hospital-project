@@ -1,0 +1,7 @@
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=hospitalDB
+
+SALT=10
+JWTSECRETKEY="gweyt468uy543ikhgc2nh3zszt84r7r"
